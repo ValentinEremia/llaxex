@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My First Parallax Efect</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#" class="logo">Logo</a>
+
+        <nav><a href="#">Menu</a></nav>
+      </header>
+      <h1 class="lax lax_preset_slideY:800:50 lax_preset_fadeOut:100:0" >Hello !!!</h1>
+      <div class="line lax lax_preset_fadeOut:80:0"></div>
+    </div>
+
+    <div class="container secondary">
+     
+
+    </div>
+
+
+
+    <img src="./images/bg.png" alt="marea" class="bg" />
+    <img src="./images/cuplu.png" alt="cuplu" class="cuplu lax lax_preset_slideY:180:-209" />
+    <img src="./images/stanca.png" alt="stanca" class="stanca lax lax_preset_slideY:188:-596" />
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <!-- JS -->
+    <script>
+      window.onload = function () {
+        lax.init();
+
+        // Add a driver that we use to control our animations
+        lax.addDriver("scrollY", function () {
+          return window.scrollY;
+        });
+
+        // Add animation bindings to elements
+        lax.addElements(".selector", {
+          scrollY: {
+            translateX: [
+              ["elInY", "elCenterY", "elOutY"],
+              [0, "screenWidth/2", "screenWidth"],
+            ],
+          },
+        });
+      };
+    </script>
+  </body>
+</html>

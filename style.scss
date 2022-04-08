@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nobile:wght@400;700&display=swap');
+body{
+    margin: 0;
+    height: 100vh;
+    background: #191919;
+    font-family: 'Nobile';
+}
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 2em;
+    height: 100vh;
+ 
+
+
+
+    &:first-child{
+        display: grid;
+        grid-template-rows:10% 40% auto ;
+    }
+    h1{
+        text-align: center;
+        margin-top: 2.5em;
+        font-size: 5em;
+        font-weight: bold;
+        line-height: .9em;
+        color: rgb(22, 22, 22);
+    }
+
+    p{
+        line-height: 1.5em;
+        color: rgb(0, 0, 0);
+    }
+    .line{
+        align-self: end;
+        width: 50%;
+        border-right: 2.5px solid rgb(16, 16, 16);
+        height: 50%;
+        margin-bottom: 2em;
+        position: relative;
+
+        &::after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style:solid ;
+            border-width: 13px 13px 0 13px;
+            border-color: rgb(13, 13, 13) transparent transparent transparent;
+            right: -.9em;
+            bottom: -2px;
+
+
+        }
+    }
+}
+
+header{
+    margin:0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+ 
+    align-items: center;
+}
+.logo{
+    color: #fb1111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+nav a{
+    color: #fb1313;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.5em;}
+
+
+.bg, .cuplu, .stanca{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.bg{
+    top: 0;
+    background-attachment: fixed;
+}
+.cuplu{
+    top:22%;
+}
+.stanca{
+    top:67.5%;
+}
